@@ -1,0 +1,36 @@
+button.subscribe {
+    background-color: #c00404;
+    color: white;
+    border: 1px solid #c00404;
+}
+
+button.join {
+    background-color: #6ab863;
+    color: #132352;
+    border: 1px solid #132352;
+}
+
+button.tweet {
+    background-color: #013152;
+    color: white;
+    border: 1px solid #1d8ad6;
+}
+
+.button-square {
+    border-radius: 2px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button-round {
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#title {
+    color: white;
+    background-color: blanchedalmond;
+}
