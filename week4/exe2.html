@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise 2 - Navigation Bar</title>
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <style>
+        #nav {
+            display: flex;
+            align-items: center;
+        }
+
+        #nav div {
+            margin-right: 20px;
+            font-size: medium;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4f4e56;
+        }
+
+        a:hover {
+            color: #aa62fc;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(248, 247, 245);
+            border: 1px solid #0d7cec;
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            align-items: center;
+        }
+
+        button.call {
+            background-color: #a243fd;
+            color: white;
+            border: 1px solid;
+            border-radius: 20px;
+            padding: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><img src="images/twitter.png" alt="LOGO" height="30"></div>
+        <div id="nav">
+            <div><a href="#">Home</a></div>
+            <div><a href="#">Service</a></div>
+            <div><a href="#">About</a></div>
+            <div><a href="#">Testimonials</a></div>
+            <div><a href="#">Client</a></div>
+            <div><a href="#">Contact</a></div>
+        </div>
+        <button class="call">Call Now</button>
+    </header>
+</body>
+
+</html>
