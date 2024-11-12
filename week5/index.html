@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Lesson 5 - Column Display</title>
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .column {
+            /*Creates equal-width for all column*/
+            flex: 1;
+            padding: 10px;
+        }
+
+        .column1 {
+            background-color: lightblue
+        }
+
+        .column2 {
+            /*double size width for this column*/
+            flex: 2;
+            background-color: lightgreen;
+        }
+
+        .column3 {
+            background-color: rgb(244, 178, 208)
+        }
+
+        .column4 {
+            /*double size width for this column*/
+            flex: 1;
+            background-color: rgb(246, 246, 163);
+        }
+
+        .head {
+            background-color: rgb(101, 139, 101);
+            padding: 10px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="head header">
+            <h1>Header</h1>
+        </div>
+    </header>
+
+    <!--column 1-->
+    <div class="container">
+        <div class="column column1">
+            <h2> Column 1</h2>
+            <p>This is the first column.fdmsfnakfmdkfnanfdsvkvmxmcdmkaff cmzmkfs</p>
+        </div>
+        <div class="column column2">
+            <h2> Column 2</h2>
+            <p>This is the second column.</p>
+        </div>
+    </div>
+
+    <!--column 2-->
+    <div class="container">
+        <div class="column column3">
+            <h2> Column 3</h2>
+            <p>hinad,asnasssokcsmzslsdkcm,xcndflzxvdcnzxczxvmdzkllxcm</p>
+        </div>
+        <br /><br />
+
+        <div class="column column4">
+            <h2> Column 4</h2>
+            <p>dnskckxkcdsvm mxvzxcksdvkdmzfdlvmdkdvd</p>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="head">
+        <div class="head footer">
+            <p> Footer</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
