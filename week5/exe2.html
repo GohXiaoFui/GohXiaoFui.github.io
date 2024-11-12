@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Exercise 2 - Navigation Bar</title>
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <style>
+        #nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #353149;
+            display: justify;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            display: justify;
+            align-items: center;
+        }
+
+        .navigation.left {
+            justify-content: flex-start;
+            /* Aligns the left section to the start (left) */
+        }
+
+        .ml {
+            margin-right: 10px;
+        }
+
+        .mb {
+            color: white;
+            font-family: arial;
+            margin-bottom: -5%;
+            font-size: medium;
+        }
+
+        .va {
+            color: rgb(196, 196, 196);
+            font-family: arial;
+            font-size: small;
+        }
+
+        .n1 {
+            display: flex;
+            font-size: large;
+            color: rgb(196, 196, 196);
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .space {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 20px;
+        }
+
+        .sc {
+            margin-left: 10px;
+        }
+
+        .in {
+            color: #f45018;
+            font-size: small;
+            margin-right: 10px;
+            margin-left: 5px;
+            font-family: arial;
+        }
+
+        .cs {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <!--left-->>
+        <div class="navigation left">
+            <img src="image//m.png" alt="logo" height="25" class="ml">
+            <div>
+                <p class="mb">Maggie Brightstone</p>
+                <p class="va">Virtual Assistant</p>
+            </div>
+        </div>
+
+        <!--right-->
+        <div class="navigation">
+            <div class="n1">Services and Pricing</div>
+            <div class="n1">About</div>
+            <div class="n1">Contact</div>
+            <div class="space">
+                <img src="image/users.png" alt="login" height="25" class="sc">
+                <div class="in">Log In</div>
+            </div>
+            <img src="image/facebook.png" alt="facebook" height="20" class="cs">
+            <img src="image/instagram.png" alt="instagram" height="15" class="cs">
+            <img src="image/linkedin.png" alt="in" height="15" class="cs">
+        </div>
+    </div>
+</body>
+
+</html>

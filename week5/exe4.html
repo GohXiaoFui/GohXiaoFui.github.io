@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Exercise 4 - Navigation Bar </title>
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <style>
+        .head {
+            background-color: #a4bda2;
+            color: black;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            justify-content: space-between;
+            padding-left: 30px;
+            display: flex;
+        }
+
+        .ac {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .container {
+            display: flex;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .bio {
+            align-items: center;
+            text-align: center;
+        }
+
+        .pic {
+            border-radius: 50%;
+            overflow: hidden;
+            object-position: center;
+        }
+
+        .space {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            /* Vertically aligns items to the center */
+            gap: 15px;
+            /* Adds space between the icon and text */
+            justify-content: center;
+            margin-top: 20px;
+            padding: -20px;
+        }
+
+        .line {
+            width: 95%;
+        }
+
+        .column {
+            flex: 1;
+            padding: 5px;
+            background-color: #e2e2e2;
+            color: black;
+            border-radius: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: center;
+            opacity: 70%;
+            gap: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .column4 {
+            background-color: #e2e2e2;
+            color: black;
+            border-radius: 20px;
+            padding: 5px 10px;
+            align-items: center;
+            text-align: center;
+            margin-left: 15px;
+            margin-right: 15px;
+            opacity: 70%;
+        }
+
+        .ca {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 30px;
+        }
+
+        .footer {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 5px;
+        }
+
+        body {
+            background-image: url(" image/bg.jpg");
+            background-size: cover;
+            font-family: "Bad Script", cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="head header">
+            <h1 class="logo"> LOGO </h1>
+            <div class="ac">
+                <a href="https://www.facebook.com/">
+                    <img src="image/fb.png" alt="facebook" height="20">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="image/ins.png" alt="instagram" height="20">
+                </a>
+                <a href="https://x.com/?lang=en&mx=2">
+                    <img src="image/twitter.png" alt="twitter" height="20">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <br /><br />
+
+    <!--intro part-->
+    <div class="bio">
+        <img src="image/myself.jpg" alt="myself" height="300" class="pic">
+        <h2>Goh Xiao Fui</h2>
+        <h2>Web Publishing</h2>
+        <p> Hello! I'm Goh Xiao Fui, a student who study design course. I love travel and challenge some exciting
+            things. Welcome to my
+            personal page!</p>
+    </div>
+
+    <!--column 1-->
+    <div class="container">
+        <div class="column">
+            <div class="space">
+                <img src="image/cc.png" alt="calender" height="20">
+                <h2>Week 2</h2>
+            </div>
+            <hr class="line"> <!-- Adds a horizontal line here -->
+            <p>Exercise 1</p>
+            <p>Exercise 2</p>
+        </div>
+        <div class="column">
+            <div class="space">
+                <img src="image/cc.png" alt="calender" height="20">
+                <h2> Week 3</h2>
+            </div>
+            <hr class="line"> <!-- Adds a horizontal line here -->
+            <p>Exercise 1</p>
+            <p>Exercise 2</p>
+        </div>
+        <div class="column">
+            <div class="space">
+                <img src="image/cc.png" alt="calender" height="20">
+                <h2> Week 4</h2>
+            </div>
+            <hr class="line"> <!-- Adds a horizontal line here -->
+            <p>Exercise 1</p>
+            <p>Exercise 2</p>
+        </div>
+    </div>
+
+    <br /><br />
+
+    <!--column 2-->
+    <div class="column4">
+        <div class="space">
+            <img src="image/cc.png" alt="calender" height="20">
+            <h2> Week 5</h2>
+        </div>
+        <hr class="line"> <!-- Adds a horizontal line here -->
+        <p>Exercise 1</p>
+        <p>Exercise 2</p>
+    </div>
+
+    <br /><br />
+
+    <!--footer-->
+    <div class="head footer">
+        <div class="ca">
+            <a href="https://www.facebook.com/">
+                <img src="image/fb.png" alt="facebook" height="25">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img src="image/ins.png" alt="instagram" height="25">
+            </a>
+            <a href="https://x.com/?lang=en&mx=2">
+                <img src="image/twitter.png" alt="twitter" height="25">
+            </a>
+        </div>
+        <p>2024 Goh Xiao Fui. All right reserved.</p>
+    </div>
+</body>
+
+</html>
