@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title> Exercise 1 - Navigation Bar with Submenu</title>
+    <title> Exercise 2 - Navigation Bar with Submenu</title>
     <meta name="viewport" content=" width=device-width, initial-scale=1.0">
     <style>
         #navbar {
@@ -26,7 +26,6 @@
             margin-right: 30px;
             font-family: Arial, Helvetica, sans-serif;
             position: sticky;
-            margin-left: auto;
             align-items: center;
         }
 
@@ -66,6 +65,22 @@
             align-items: center;
             gap: 5px;
         }
+
+        /*mobile*/
+        @media screen and (max-width: 600px) {
+            #navbar {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .a {
+                text-align: center;
+            }
+
+            .home {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -77,7 +92,7 @@
                 <img src="image/netflix.png" alt="netflix" height="80">
             </div>
             <div class="menu">
-                <img src="image/home.png" alt="home" height="25" style="margin-right:-25px;">
+                <img src="image/home.png" alt="home" height="25" style="margin-right:-25px;" class="home">
                 <a href="#" class="home">Home</a>
                 <div class="menu-abt">
                     <a href="#">About</a>
