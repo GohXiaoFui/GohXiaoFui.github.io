@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+    <title>BUILDING FUTURE</title>
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #f6f5ef;
+            font-family: 'Oxygen', sans-serif;
+            color:#646463;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main h1, .main h6, .column h2 {
+            color: #21201E;
+            font-family: Archivo, sans-serif;
+        }
+
+        .column {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin-left: 5%;
+            margin-right: 5%;
+            gap: 30px;
+        }
+
+        .pic1, .pic2, .pic3 {
+            background-color: white;
+            padding: 20px 20px 20px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            align-items: flex-start;
+        }
+
+        .pic1 img, .pic2 img, .pic3 img {
+            border-radius: 16px;
+        }
+
+        .main h1{
+            font-size: 55px;
+        }
+
+        .main h6{
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            font-weight: 500px;
+        }
+
+        .column h2{
+            font-size: 30px;
+            margin-left: 20px;
+        }
+
+        .column p{
+            line-height: 1.6;
+            margin-left: 20px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .pic1, .pic2, .pic3 {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .main h1{
+                font-size: 35px;
+            }
+
+            .main h6{
+                font-size: 12px;
+            }  
+        }
+
+        @media screen and (max-width: 750px) {
+            .column {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pic1, .pic2, .pic3 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .main h1{
+                font-size: 28px;
+            }
+
+            .main h6{
+                font-size: 10px;
+            }  
+        }
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <h6> BUILDING A BETTER FUTURE </h6>
+    <h1> We construct & deliver quality projects </h1>
+    <p> Meet our customers and explore their success stories with us </p>
+</div>
+
+<div class="column">
+    <div class="pic1">
+        <img src="img/img projects.jpg" alt="1" width="100%">
+        <h2> Residential projects </h2>
+        <p> We build sustainable and modern homes for comfortable living. </p>
+    </div>
+
+    <div class="pic2">
+        <img src="img/img spaces.jpg" alt="2" width="100%">
+        <h2> Commercial spaces </h2>
+        <p> We create efficient, inspiring workspaces for business of all sizes. </p>
+    </div>
+
+    <div class="pic3">
+        <img src="img/img works.jpg" alt="3" width="100%">
+        <h2> Infrastucture works </h2>
+        <p> We develop strong, realible infrastucture for growing communities. </p>
+    </div>
+</div>
+</body>
+
+</html>
