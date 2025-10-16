@@ -49,8 +49,21 @@
             align-items: flex-start;
         }
 
-        .pic1 img, .pic2 img, .pic3 img {
-            border-radius: 16px;
+        .card {
+            border-radius: 10px;
+            overflow: hidden;           /* 限制图片超出边界 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease; /* 平滑动画 */
+        }
+
+        .card img:hover {
+            transform: scale(1.1);      /* hover 放大图片 */
         }
 
         .main h1{
@@ -119,19 +132,25 @@
 
 <div class="column">
     <div class="pic1">
-        <img src="img/img projects.jpg" alt="1" width="100%">
+        <div class="card">
+            <img src="img/img projects.jpg" alt="1" width="100%">
+        </div>
         <h2> Residential projects </h2>
         <p> We build sustainable and modern homes for comfortable living. </p>
     </div>
 
     <div class="pic2">
-        <img src="img/img spaces.jpg" alt="2" width="100%">
+        <div class="card">
+            <img src="img/img spaces.jpg" alt="2" width="100%">
+        </div>
         <h2> Commercial spaces </h2>
         <p> We create efficient, inspiring workspaces for business of all sizes. </p>
     </div>
 
     <div class="pic3">
-        <img src="img/img works.jpg" alt="3" width="100%">
+        <div class="card">
+            <img src="img/img works.jpg" alt="3" width="100%">
+        </div>
         <h2> Infrastucture works </h2>
         <p> We develop strong, realible infrastucture for growing communities. </p>
     </div>

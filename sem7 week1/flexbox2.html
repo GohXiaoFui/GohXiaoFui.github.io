@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html>
-
 <head> 
     <title>BUILDING FUTURE</title>
     <meta name="viewport" content=" width=device-width, initial-scale=1.0">
@@ -28,6 +26,7 @@
             padding: 10px 60px;
             background-color: white;
             gap: 10px;
+            position: relative;
         }
 
         .menu {
@@ -38,7 +37,89 @@
         }
 
         .hamburger {
-            display: none;      
+            display: none;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100%;
+            background-color: #222222;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            flex-direction: column;
+            padding: 80px 40px 40px; /* 增加上边距给关闭按钮留空间 */
+            box-sizing: border-box;
+            transition: right 0.3s ease; /* 添加过渡动画 */
+        }
+
+        .mobile-menu.active {
+            display: flex;
+            right: 0; 
+        }
+
+        .mobile-menu a {
+            padding: 15px 0; /* 增加垂直间距 */
+            font-family: Archivo, sans-serif;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+            text-align: center; /* 文字居中 */
+            border-bottom: 1px solid #444; /* 添加分隔线 */
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            background-color: #333; /* 悬停效果 */
+            color: #f9612b; /* 悬停颜色变化 */
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none; /* 最后一个链接没有下划线 */
+        }
+
+        /* 关闭按钮样式 */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #444;
+        }
+
+        /* 遮罩层 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 999;
+        }
+
+        .overlay.active {
+            display: block;
         }
 
         a {
@@ -99,16 +180,23 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 30%;
             align-items: flex-start;
-            overflow: hidden;
         }
 
-        .pic1 img, .pic2 img, .pic3 img {
-            border-radius: 16px;
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
             transition: transform 0.3s ease;
         }
 
-        .pic1 img:hover, .pic2 img:hover, .pic3 img:hover {
-            transform: scale(1.08);
+        .card img:hover {
+            transform: scale(1.1);
         }
 
         .main h1 {
@@ -174,6 +262,11 @@
             .logo{
                 width: 20%;
             }
+
+            .mobile-menu {
+                width: 300px;
+                padding: 70px 30px 30px;
+            }
         }
 
         @media screen and (max-width: 750px) {
@@ -206,7 +299,12 @@
             .main h6{
                 font-size: 12px;
                 margin-bottom: -20px;
-            }  
+            }
+
+            .mobile-menu {
+                width: 280px;
+                padding: 60px 25px 25px;
+            }
         }
     </style>
 </head>
@@ -228,9 +326,23 @@
         <button><a href="#"> Contact </a></button>
     </div>
 
-    <div class="hamburger">
-            <img src="img/menu.png" alt="menu" width="25px">
+    <div class="hamburger" id="hamburger">
+        <img src="img/menu.png" alt="menu" width="25px">
     </div>
+</div>
+
+<!-- 遮罩层 -->
+<div class="overlay" id="overlay"></div>
+
+<!-- 侧边菜单 -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="closeMenu">×</button>
+    
+    <a href="#"> Home </a>
+    <a href="sem7week1/flexbox1.html"> Services </a>
+    <a href="#"> Work </a>
+    <a href="#"> Project Details</a>
+    <a href="#"> Contact </a>
 </div>
 
 <div class="main">
@@ -241,23 +353,58 @@
 
 <div class="column">
     <div class="pic1">
-        <img src="img/img projects.jpg" alt="1" width="100%">
+        <div class="card">
+            <img src="img/img projects.jpg" alt="1" width="100%">
+        </div>
         <h2> Residential projects </h2>
         <p> We build sustainable and modern homes for comfortable living. </p>
     </div>
 
     <div class="pic2">
-        <img src="img/img spaces.jpg" alt="2" width="100%">
+        <div class="card">
+            <img src="img/img spaces.jpg" alt="2" width="100%">
+        </div>
         <h2> Commercial spaces </h2>
         <p> We create efficient, inspiring workspaces for business of all sizes. </p>
     </div>
 
     <div class="pic3">
-        <img src="img/img works.jpg" alt="3" width="100%">
+        <div class="card">
+            <img src="img/img works.jpg" alt="3" width="100%">
+        </div>
         <h2> Infrastucture works </h2>
         <p> We develop strong, realible infrastucture for growing communities. </p>
     </div>
 </div>
-</body>
 
+<script>
+    // 汉堡菜单功能
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    const overlay = document.getElementById('overlay');
+    
+    // 打开菜单
+    hamburger.addEventListener('click', function() {
+        mobileMenu.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // 防止背景滚动
+    });
+    
+    // 关闭菜单
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto'; // 恢复滚动
+    }
+    
+    closeMenu.addEventListener('click', closeMobileMenu);
+    overlay.addEventListener('click', closeMobileMenu);
+    
+    // 点击菜单项后关闭菜单
+    document.querySelectorAll('.mobile-menu a').forEach(item => {
+        item.addEventListener('click', closeMobileMenu);
+    });
+</script>
+</body>
 </html>
