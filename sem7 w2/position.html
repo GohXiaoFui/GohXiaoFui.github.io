@@ -17,6 +17,7 @@
             color:#646463;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
 
         /*nav bar*/
@@ -137,15 +138,15 @@
 
         /*content*/
         .bigcolumn {
-            background-image: url(img/positionbgimg.jpg);
+             background-image: url(img/positionbgimg.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-color: #191919;
             font-family: archivo, sans-serif;
-            padding: 2% 2% 2% 3%;
+            padding: 40px 20px;
             position: relative;
             min-height: 100vh;    
-            margin: 0px 20px 0px 20px;        
+            margin: 0;        
         }
 
         .container {
@@ -157,14 +158,16 @@
             font-weight: 800;
             line-height: 80px;
             width: 700px;
+            margin-bottom: 20px;
+
         }
 
         .container p {
             font-size: 20px;
             line-height: 25px;
             font-weight: 200;
-            margin-top: -30px;
             margin-bottom: 30px;
+            max-width: 600px;
         }
 
         .button .request {
@@ -176,6 +179,7 @@
             color: #21201e;
             margin-right: 20px;
             font-size: 16px;
+            font-weight: 600;
         }
 
         .button .portfolio {
@@ -186,6 +190,7 @@
             cursor: pointer;
             color: white;
             font-size: 16px;
+            font-weight: 600;
         }
 
         .button .portfolio:hover {
@@ -216,18 +221,14 @@
         .content1 h1, .content2 h1, .content3 h1, .content4 h1 {
             font-size: 60px;
             color: #f9612b;
-            margin-top: 0px;
-            margin-left: 0px;
-            margin-right: 0px;
-            margin-bottom: 10px;
+            margin: 0 0 10px 0;
         }
 
         .content1 h6, .content2 h6, .content3 h6, .content4 h6 {
             font-size: 18px;
             color: black;
-            margin-top: 10px;
             font-weight: bolder;
-            margin-bottom: 0;
+            margin: 10px 0 0 0;
         }
 
         @media screen and (max-width: 1280px){
@@ -278,49 +279,58 @@
         }
 
         @media screen and (max-width: 750px) {
-            .logo{
-                width: 30%;
-            }
-
-            .contact {
-                display: none;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .mobile-menu {
-                width: 280px;
-                padding: 60px 25px 25px;
-            }
-
-            .container h1 {
-                font-size: 40px;
-            }
-
-            .button{
-                margin-bottom: 20px;
-            }
-
-            .content {
-                flex-direction: column;
-                position: static;
-            }
-
-            .content1, .content2, .content3, .content4 {
-                width: 100%;
-            }
-
-            .content1 h1, .content2 h1, .content3 h1, .content4 h1{
-                font-size: 40px;
-
-            }
-
-            .content1 h6, .content2 h6, .content3 h6, .content4 h6{
-                font-size: 16px;
-            }
+        .logo{
+            width: 30%;
         }
+
+        .contact {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        .mobile-menu {
+            width: 280px;
+            padding: 60px 25px 25px;
+        }
+
+        .container h1 {
+            font-size: 40px;
+            line-height: 1.2; /* 改善行高 */
+            width: auto; /* 移除固定宽度 */
+            max-width: 100%; /* 确保不超过容器 */
+        }
+
+        .button{
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px; /* 按钮间距 */
+            align-items: flex-start; /* 左对齐 */
+        }
+
+        .content {
+            flex-direction: column;
+            position: static; /* 移除绝对定位 */
+            padding: 0; /* 移除内边距 */
+            gap: 15px; /* 增加间距 */
+            margin-top: 30px; /* 添加上边距 */
+        }
+
+        .content1, .content2, .content3, .content4 {
+            width: 100%;
+            box-sizing: border-box; /* 确保padding包含在宽度内 */
+        }
+
+        .content1 h1, .content2 h1, .content3 h1, .content4 h1{
+            font-size: 40px;
+        }
+
+        .content1 h6, .content2 h6, .content3 h6, .content4 h6{
+            font-size: 16px;
+        }
+    }
     </style>
 </head>
 
